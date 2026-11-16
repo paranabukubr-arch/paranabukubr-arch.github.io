@@ -1,0 +1,46 @@
+/* Paranabuku Games — site do estúdio. Tema escuro do Flight Strike. */
+:root{
+  --ink:#0b1820; --panel:#11242f; --text:#f4f0e4; --muted:#a9bcc4; --accent:#ff6b3d; --gold:#ffd166; --line:rgba(255,255,255,.1);
+  --display:"Bungee","Arial Black",Impact,sans-serif; --ui:"Chakra Petch","Trebuchet MS",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font:400 17px/1.6 var(--ui)}
+a{color:var(--gold)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+header{border-bottom:1px solid var(--line);background:rgba(11,24,32,.92);position:sticky;top:0;z-index:5;backdrop-filter:blur(6px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.brand{font:400 20px var(--display);color:var(--text);text-decoration:none;text-shadow:0 2px 0 var(--accent);white-space:nowrap}
+nav{display:flex;gap:16px;flex-wrap:wrap;font-weight:600;font-size:15px}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--text)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;text-wrap:balance}
+h1{font-size:clamp(36px,7vw,64px);margin:0 0 12px;text-shadow:0 4px 0 var(--accent)}
+h2{font-size:clamp(24px,4vw,34px);margin:0 0 10px}
+.hero{padding-block:56px 36px;display:grid;gap:28px;grid-template-columns:1.1fr 1fr;align-items:center}
+.hero p{color:var(--muted);font-size:19px;max-width:48ch;margin:0 0 20px}
+.hero img{width:100%;border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.5);border:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#22110a;text-decoration:none;font:700 16px var(--ui);padding:13px 20px;border-radius:12px;box-shadow:0 4px 0 #b8431f}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line);box-shadow:none}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+section{padding-block:36px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.grid img{width:100%;border-radius:14px;border:1px solid var(--line);display:block}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+.card h3{font-size:18px;margin:0 0 6px;color:var(--gold)}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.legal{max-width:72ch}
+.legal h2{font-size:24px;margin-top:34px}
+.legal h3{font-family:var(--ui);font-weight:700;font-size:18px;margin:24px 0 6px;color:var(--gold)}
+.legal p,.legal li{color:#d9dde0}
+.note{font-size:14px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-block:24px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.soon{display:inline-block;font:700 12px var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,209,102,.4);padding:4px 10px;border-radius:99px;margin-bottom:10px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.duo img{border-radius:16px}
+.duo img:last-child{margin-top:36px}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-block:32px 16px}}
+@media (max-width:540px){header .wrap{flex-direction:column;align-items:flex-start;gap:6px}nav{gap:14px}}
